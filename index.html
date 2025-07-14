@@ -13,7 +13,6 @@
 
     <title>Simple Article Listing | devChallenges.io</title>
 
-    <!--You are welcome to delete these styles or modify them in your own stylesheet -->
     <style>
       * {
         margin: 0;
@@ -35,31 +34,169 @@
       .author-info a {
         text-decoration: none;
       }
+
+
+      .container{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        /* background-color: red; */
+        /* height: 90vh; */
+      }
+
+      .container-fluid{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        /* background-color: yellow; */
+        padding: calc(90vh / 20) calc(100% / 15);
+      }
+
+      .header-title{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        /* background-color: blue; */
+        /* height: calc(100vh / 5); */
+      }
+
+      .header-title h1 {
+        text-align: center;
+        color: black;
+        margin: 0;
+        font-size: 40px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      }
+
+      .header-title img {
+        padding: 20px 0px;
+      }
+
+      .article-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      .articles {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        /* background-color: aqua; */
+        width: calc(100% / 1.5);
+        gap: 50px;
+      }
+
+      .article-card {
+        display: flex;
+        font-size: 20px;
+        flex-direction: row;
+        gap: 30px;
+      }
+
+      .text-div {
+        display: flex;
+        /* background-color: blueviolet; */
+        justify-content: center;
+        justify-items: center;
+        flex-direction: column;
+      }
+
+      .text-div p{
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        line-height: 1.6rem;
+      }
+
+      .text-div span{
+        margin-top: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .article-card img{
+        border-radius: 15px;
+      }
+
+      @media (max-width: 830) {
+        .container-fluid{
+          width: 100%;
+          /* background-color: yellow; */
+          padding: calc(90vh / 20) 100%;
+        }
+      }
+
+      @media (max-width: 400px) {
+        .articles {
+          width: calc(100% / 0.5);
+        }
+
+        .article-card {
+          display: flex;
+          font-size: 20px;
+          flex-direction: column;
+          gap: 30px;
+        }
+
+        .article-card img {
+          width: 70%;
+        }
+      }
+
+      
+      @media (max-width: 399px) {
+        .article-card {
+          display: flex;
+          font-size: 20px;
+          flex-direction: column;
+          gap: 30px;
+        }
+
+        .article-card img {
+          width: 50%;
+        }
+      }
+
     </style>
   </head>
   <body>
-    <!-- 
 
-      We release interesting articles about technology
-    
-      Unlocking the Power of Cloud Computing
-    
-      A Guide to Scalable Solutions
-    
-      November 12, 2024
-    
-      The Future of AI
-    
-      How Machine Learning is Revolutionizing Industries
-    
-      The Impact of 5G on Business
-    
-      How Faster Networks are Transforming the Way We Work
-    
-    -->
+    <div class="container">
+      <div class="container-fluid">
+        <div class="header-title">
+          <h1>We release interesting articles <br> about technology</br>
+          <img src="resources/Seperator.svg" alt="" class="">
+        </div>
+        <div class="article-container">
+          <div class="articles">
+            <div class="article-card">
+              <img src="resources/photo_1.png" alt="">
+              <div class="text-div">
+                <p>Unlocking the power of Cloud Computing : A guide to scalable solutions</p>
+                <span>November 12, 2024</span>
+              </div>
+            </div>
+            <div class="article-card">
+              <img src="resources/photo_2.png" alt="">
+              <div class="text-div">
+                <p>The Future of AI:How Machine Learning is Revolutionizing Industries</p>
+                <span>November 12, 2024</span>
+              </div>
+            </div>
+            <div class="article-card">
+              <img src="resources/photo_3.png" alt="">
+              <div class="text-div">
+                <p>The Impact of 5G on Business: How Faster Networks are Transforming the Way We Work</p>
+                <span>November 12, 2024</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div class="author-info">
-      Coded by <a href="#">Your Name Here</a> | Challenge by
+      Coded by <a href="#">Vital Acododja</a> | Challenge by
       <a href="https://www.devchallenges.io?ref=challenge" target="_blank"
         >devChallenges.io</a
       >.
